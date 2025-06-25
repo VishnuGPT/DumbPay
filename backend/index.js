@@ -6,6 +6,6 @@ app.use(express.json())
 app.use(cors());
 app.use('/api/v1',mainRouter)
 
-app.listen(3000, '192.168.14.19', () => {
-  console.log('Server running at http://192.168.14.19:3000');
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
