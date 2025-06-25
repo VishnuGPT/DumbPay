@@ -79,7 +79,7 @@ const Signup = () => {
                         setloading(true)
                         setTimeout(() => {
                             setloading(false)
-                            navigate('/about')
+                            navigate('/')
                         }, 2000);
                     }} className='flex justify-center'> <button className='rounded-2xl cursor-pointer border-2 border-black py-2 w-[30%] lg:w-[40%] transition transform active:scale-70'>Go Back</button></div>
                     {error && <Small_error error={errorname}/>}
