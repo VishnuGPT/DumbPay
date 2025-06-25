@@ -6,8 +6,11 @@ app.use(express.json())
 app.use(cors());
 app.use('/api/v1',mainRouter)
 
+app.get("/keepalive", (req, res) => {
+  res.status(200).send("I'm alive!");
+});
 
-// ✅ Use process.env.PORT with fallback
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
