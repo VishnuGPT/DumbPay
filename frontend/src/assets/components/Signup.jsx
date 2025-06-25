@@ -4,7 +4,7 @@ import Button from './Big_Button'
 import Heading from './Heading'
 import axios from 'axios'
 import NormalLoading from './NormalLoading'
-import Small_error from './small_error'
+import Small_error from './SError'
 import { useNavigate } from 'react-router-dom'
 import { url } from '../../../config';
 

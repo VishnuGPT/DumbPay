@@ -3,7 +3,7 @@ import Input from './Input'
 import { useState } from 'react'
 import NormalLoading from './NormalLoading'
 import axios from 'axios'
-import Small_error from './small_error'
+import Small_error from './SError'
 import { url } from '../../../config';
 import Error from './Error'
 

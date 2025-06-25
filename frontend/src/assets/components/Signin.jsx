@@ -3,7 +3,7 @@ import Input from './Input'
 import Heading from './Heading'
 import Button from './Big_Button'
 import { useNavigate } from 'react-router-dom'
-import Small_error from './small_error'
+import Small_error from './SError'
 import NormalLoading from './NormalLoading'
 import axios from 'axios'
 import { url } from '../../../config';
