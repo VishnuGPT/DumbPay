@@ -3,6 +3,7 @@ import { redirect, useNavigate } from 'react-router-dom';
 import NormalLoading from './NormalLoading'
 import { FaGithubSquare, FaLinkedinIn } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
+import FlippingTrapezium from './FlippingTrapezium'
 
 const About = () => {
     const navigate = useNavigate();
@@ -10,10 +11,10 @@ const About = () => {
     return (
         <>
 
-            <div className='p-6 border-8 borde-r-black '>
+            <div className='p-6 bg-black'>
                 {/* Header */}
-                <div className='flex justify-between items-center mb-6 gap-2 '>
-                    <h1 className='text-4xl font-extrabold text-black'>DumbPay WebApp</h1>
+                <div className='flex justify-between items-center mb-6 gap-2'>
+                    <h1 className='text-4xl font-extrabold text-white'>DumbPay WebApp</h1>
                     <div className='flex justify-center items-center flex-wrap gap-4'>
                         <button
                             onClick={() => {
@@ -23,7 +24,7 @@ const About = () => {
                                     navigate('/signin')
                                 }, 1000)
                             }}
-                            className=' cursor-pointer bg-black text-white px-6 py-2 rounded-2xl font-semibold transform active:scale-90 hover:scale-105 transition duration-200'
+                            className=' cursor-pointer bg-white text-black px-6 py-2 rounded-2xl font-semibold transform active:scale-90 hover:scale-105 transition duration-200'
                         >
                             Sign In
                         </button>
@@ -36,7 +37,7 @@ const About = () => {
                                 }, 1000)
                             }}
 
-                            className='cursor-pointer bg-black text-white px-6 py-2 rounded-2xl font-semibold transform active:scale-90 hover:scale-105 transition duration-200'
+                            className='cursor-pointer bg-white text-black px-6 py-2 rounded-2xl font-semibold transform active:scale-90 hover:scale-105 transition duration-200'
                         >
                             Sign Up
                         </button>
@@ -50,38 +51,45 @@ const About = () => {
                         Users can quickly create an account and are assigned a <strong>random starting balance between $0 and $1000. </strong>
                         You can search for friends by name and send them money instantly.
                     </p>
-                    <ul className='text-left text-gray-700 text-base space-y-2 list-disc'>
-                        <li className='hover:font-bold hover:text-xl'>Simple and fast account creation</li>
-                        <li className='hover:font-bold hover:text-xl'>Smart user search by name</li>
-                        <li className='hover:font-bold hover:text-xl'>Instant money transfers with real-time balance updates</li>
-                        <li className='hover:font-bold hover:text-xl'>Track Your Transaction History with real-time payment tracker</li>
-                        <li className='hover:font-bold hover:text-xl'>Single Page Application, no reloads</li>
-                        <li className='hover:font-bold hover:text-xl'>Mobile and desktop responsive UI</li>
-                    </ul>
+                    <FlippingTrapezium />
                 </div>
 
-                {/* Features */}
-                <div className='mt-10 text-center'>
-                    <h2 className='text-2xl font-bold mb-2'>⚙️ Key Features</h2>
-                    <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4 text-lg text-gray-800'>
-                        <div>✅ Clean & modern UI</div>
-                        <div>✅ Seamless user experience</div>
-                        <div>✅ Built with React, Node.js, Express & MongoDB</div>
-                        <div>✅ Secure (JWT-based) authentication</div>
+
+
+            </div>
+            <div className="w-full p-2 bg-white text-black flex flex-col sm:flex-row items-center justify-between gap-4 text-sm sm:text-base">
+                {/* Social Links */}
+                <div className="flex flex-wrap items-center justify-center gap-4 text-black">
+                    <div className="flex items-center gap-1">
+                        <FaGithubSquare className="text-xl" />
+                        <button
+                            onClick={() => window.open('https://github.com/VishnuGPT', '_blank')}
+                            className="hover:underline cursor-pointer"
+                        >
+                            GitHub
+                        </button>
+                    </div>
+
+                    <div className="flex items-center gap-1">
+                        <FaLinkedinIn className="text-xl" />
+                        <button
+                            onClick={() => window.open('https://www.linkedin.com/in/vishnu-gupta-bab866289/', '_blank')}
+                            className="hover:underline cursor-pointer"
+                        >
+                            LinkedIn
+                        </button>
+                    </div>
+
+                    <div className="flex items-center gap-1">
+                        <SiGmail className="text-xl" />
+                        <span className="break-all">vishnugpt21@gmail.com</span>
                     </div>
                 </div>
 
+                {/* Credit */}
+                <h1 className="text-center sm:text-right whitespace-nowrap">Made by Vishnu Gupta</h1>
             </div>
-            <div className=' bottom-0 relative p-3 text-white bg-black flex  justify-between gap-2'>
-                <div className='flex flex-wrap items-center justify-center gap-4'>
-                    <div className='flex items-center justify-center gap-1'><FaGithubSquare/><button onClick={()=>{
-                        window.open('https://github.com/VishnuGPT', '_blank')
-                    }} className='cursor-pointer'>GitHub</button></div>
-                    <div className='flex items-center justify-center gap-1'><FaLinkedinIn/><button onClick={()=> {window.open('https://www.linkedin.com/in/vishnu-gupta-bab866289/','_blank')}} className='cursor-pointer'>Linkedin</button></div>
-                    <div className='flex items-center justify-center gap-1'><SiGmail /><h1>vishnugpt21@gmail.com</h1></div>
-                </div>
-                <h1>Made By Vishnu Gupta</h1>
-            </div>
+
             {loading && <NormalLoading />}
         </>
     );

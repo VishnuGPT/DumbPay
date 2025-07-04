@@ -1,0 +1,43 @@
+export default function AnimatedLayout() {
+  return (
+    <svg viewBox="0 0 64 64" className="w-12 h-12 text-pink-400">
+      <rect
+        x="8"
+        y="8"
+        width="48"
+        height="48"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="4"
+        strokeDasharray="192"
+        strokeDashoffset="192"
+      >
+        <animate
+          attributeName="stroke-dashoffset"
+          values="192;0;0;192"
+          keyTimes="0;0.3;0.7;1"
+          dur="4s"
+          repeatCount="indefinite"
+        />
+      </rect>
+      <line
+        x1="8"
+        y1="28"
+        x2="56"
+        y2="28"
+        stroke="white"
+        strokeWidth="2"
+        strokeDasharray="48"
+        strokeDashoffset="48"
+      >
+        <animate
+          attributeName="stroke-dashoffset"
+          values="48;0;0;48"
+          keyTimes="0;0.3;0.7;1"
+          dur="4s"
+          repeatCount="indefinite"
+        />
+      </line>
+    </svg>
+  );
+}
