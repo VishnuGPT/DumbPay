@@ -44,8 +44,8 @@ const About = () => {
                     </div>
                 </div>
 
-                {/* Info Section */}
-                <div className='bg-white/70 rounded-2xl shadow-lg p-6 lg:w-[90vw] mx-auto text-center'>
+
+                <div className='bg-[rgb(179,179,179)] rounded-2xl shadow-lg p-6 lg:w-[90vw] mx-auto text-center'>
                     <p className='text-lg text-gray-800 mb-4 leading-relaxed'>
                         <strong>DumbPay</strong> dummy payment app built with the MERN stack by Vishnu Gupta.
                         Users can quickly create an account and are assigned a <strong>random starting balance between $0 and $1000. </strong>
