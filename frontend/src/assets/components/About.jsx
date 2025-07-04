@@ -57,7 +57,7 @@ const About = () => {
 
 
             </div>
-            <div className="w-full p-2 bg-white text-black flex flex-col sm:flex-row items-center justify-between gap-4 text-sm sm:text-base">
+            <div className="w-full p-2 bg-[rgb(179,179,179)] text-black flex flex-col sm:flex-row items-center justify-between gap-4 text-sm sm:text-base">
                 {/* Social Links */}
                 <div className="flex flex-wrap items-center justify-center gap-4 text-black">
                     <div className="flex items-center gap-1">
