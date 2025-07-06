@@ -9,8 +9,6 @@ app.use('/api/v1',mainRouter)
 app.get("/keepalive", (req, res) => {
   res.status(200).send("I'm alive!");
 });
-
-
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {

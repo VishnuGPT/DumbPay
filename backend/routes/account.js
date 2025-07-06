@@ -30,8 +30,8 @@ accountRouter.post('/transfer', authMiddleware, async (req, res) => {
     const date = now.toLocaleDateString();
     const time = now.toLocaleTimeString();
     function generateTransactionId(senderId) {
-        const date = new Date().toISOString().slice(0, 10).replace(/-/g, ''); // e.g., '20250625'
-        const random = crypto.randomBytes(3).toString('hex'); // 6-character random hex
+        const date = new Date().toISOString().slice(0, 10).replace(/-/g, '');
+        const random = crypto.randomBytes(3).toString('hex'); 
         return `TXN-${senderId.toString().slice(-6)}-${date}-${random}`;
     }
 
